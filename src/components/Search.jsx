@@ -31,7 +31,7 @@ const Search = () => {
     }
 
     // For security reasons, use an environment variable to store the token
-    const options = { headers: { Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_TOKEN}` } };
+    // const options = { headers: { Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_TOKEN}` } };
 
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`, options);
