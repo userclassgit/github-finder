@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { token } from '../../token.js';
+// import { token } from '../../token.js';
 
 
 const Search = () => {
@@ -30,8 +30,8 @@ const Search = () => {
       return;
     }
 
-    // For security reasons, I import the token from a separate file.
-    const options = { headers: { Authorization: `Bearer ${window.token}` } };
+    // For security reasons, use an environment variable to store the token
+    const options = { headers: { Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_TOKEN}` } };
 
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`, options);
