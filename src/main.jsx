@@ -6,7 +6,7 @@ import App from './App';
 const root = document.getElementById('root');
 createRoot(root).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/github-finder">
       <App />
     </BrowserRouter>
   </React.StrictMode>
