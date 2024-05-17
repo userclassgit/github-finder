@@ -11,3 +11,21 @@ body {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
 }
+
+/* 
+========================================
+Repo styles
+========================================
+*/
+
+.repository {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f5f5f5;
+}
+
+.repository-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
