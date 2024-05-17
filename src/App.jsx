@@ -6,7 +6,7 @@ import User from './components/User'
 function App() {
   return (
     <div>
-      hi
+      <Search />
     </div>
   );
 }
