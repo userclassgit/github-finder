@@ -16,6 +16,11 @@ const User = () => {
       });
   }, [username]);
 
+  // Without this check, the component will render before the user state/object is set
+  if (!user) {
+    return <div>Loading. Be patient.</div>;
+  }
+
   return (
     <div>
       <h1>{user.name}</h1>
