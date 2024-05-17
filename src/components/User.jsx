@@ -1,4 +1,6 @@
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 
 const User = () => {
@@ -14,9 +16,13 @@ const User = () => {
   }
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <h1>{user.name}</h1>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,11 @@
 @charset "utf-8";
 
-:root {
+/* :root {
 }
 
 body {
-  /* background-color: var(--bg-beige); */
-}
+
+} */
 
 .container {
   width: min(100% - 30px, 1080px);

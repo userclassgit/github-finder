@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './css/reset.css';
 import './css/style.css';
 import Search from './components/Search';
