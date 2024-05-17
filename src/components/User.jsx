@@ -21,7 +21,25 @@ const User = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
+      <img src={user.avatar_url} alt="User avatar" />
       <h1>{user.name}</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div>
+          <p>{user.public_repos}</p>
+          <p>Repos</p>
+        </div>
+        <div>
+          <p>{user.followers}</p>
+          <p>Followers</p>
+        </div>
+        <div>
+          <p>{user.following}</p>
+          <p>Following</p>
+        </div>
+      </div>
+      <a href={user.html_url} target="_blank" rel="noopener noreferrer">Visit Page</a>
+      <h2>Repositories</h2>
+      {/* map repo components */}
     </motion.div>
   );
 };
