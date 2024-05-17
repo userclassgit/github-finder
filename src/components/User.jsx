@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 const User = () => {
-  const { username } = useParams();
-  const [user, setUser] = useState(null);
+  // Use useLocation() to access the state prop(response.data) that was passed from the Search component.
+  const { state } = useLocation();
+  // state?.user is like state.user except it won't throw a TypeError when state is undefined/null
+  // optional chaining
+  const user = state?.user;
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${username}`)
-      .then(response => response.json())
-      .then(data => {
-        setUser(data);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }, [username]);
-
-  // Without this check, the component will render before the user state/object is set
+  // Without this check, the component will render before the user state/object is fetched
   if (!user) {
     return <div>Loading. Be patient.</div>;
   }
