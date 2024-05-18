@@ -211,3 +211,14 @@ Repo styles
   }
 }
 
+@media (max-width: 450px) {
+  .repository-top {
+    .repository-name {
+      font-size: 1.1rem;
+      margin-top: 0.15rem;
+    }
+    p.last-updated {
+      font-size: .93rem;
+    }
+  }
+}
