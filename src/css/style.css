@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: min(100% - 30px, 1080px);
+  width: min(100% - 30px, 800px);
   margin-inline: auto;
 }
 
@@ -193,6 +193,7 @@ Repo styles
 */
 
 .repo-container {
+  width: 100%;
   a {
     text-decoration: none;
   }
@@ -203,7 +204,6 @@ Repo styles
     margin-bottom: 1.2rem;
   }
 
-  max-width: 100%;
 }
 
 .repository {
