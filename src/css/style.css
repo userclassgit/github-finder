@@ -56,8 +56,11 @@ Search styles
     margin-bottom: .5rem;
     background-color: var(--aquamarine);
     border: none;
-    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-      inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+    box-shadow: 
+      inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      inset var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   }
 
   input::placeholder {
