@@ -33,7 +33,7 @@ const User = () => {
       <img src={user.avatar_url} alt="User avatar" />
       <h1>{user.name}</h1>
       <span>@{user.login}</span>
-      <div className='user-stats' style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className='user-stats'>
         <div>
           <p>{user.public_repos}</p>
           <p>Repos</p>
@@ -48,8 +48,10 @@ const User = () => {
         </div>
       </div>
       <a href={user.html_url} target="_blank" rel="noopener noreferrer">Visit Page</a>
-      <h2>Repositories</h2>
-      {repos.map(repo => <Repository key={repo.id} repo={repo} />)}
+      <div className="repo-container">
+        <h2>Repositories</h2>
+        {repos.map(repo => <Repository key={repo.id} repo={repo} />)}
+      </div>
     </motion.div>
   );
 };
