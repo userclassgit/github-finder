@@ -25,7 +25,7 @@ const User = () => {
   }
 
   return (
-    <motion.div
+    <motion.div className='container user-container'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -33,7 +33,7 @@ const User = () => {
       <img src={user.avatar_url} alt="User avatar" />
       <h1>{user.name}</h1>
       <span>@{user.login}</span>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div className='user-stats' style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div>
           <p>{user.public_repos}</p>
           <p>Repos</p>
