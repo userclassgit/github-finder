@@ -48,10 +48,12 @@ const User = () => {
         </div>
       </div>
       <a className='visit-page-btn' href={user.html_url} target="_blank" rel="noopener noreferrer">Visit Profile</a>
-      <div className="repo-container">
-        <h2>Repositories</h2>
-        {repos.map(repo => <Repository key={repo.id} repo={repo} />)}
-      </div>
+      {repos.length > 0 && (
+        <div className="repo-container">
+          <h2>Repositories</h2>
+          {repos.map(repo => <Repository key={repo.id} repo={repo} />)}
+        </div>
+      )}
     </motion.div>
   );
 };
