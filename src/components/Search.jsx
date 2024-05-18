@@ -3,12 +3,11 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-// import { token } from '../../token.js';
 
 
 const Search = () => {
   const [username, setUsername] = useState('');
-  const [message, setMessage] = useState('Enter GitHub username');
+  const [message, setMessage] = useState('Search any GitHub user');
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -30,7 +29,6 @@ const Search = () => {
       return;
     }
 
-    // For security reasons, use an environment variable to store the token
     const options = { headers: { Authorization: `Bearer ${import.meta.env.VITE_APP_GITHUB_TOKEN}` } };
     try {
       const response = await axios.get(`https://api.github.com/users/${username}`, options);
@@ -54,9 +52,10 @@ const Search = () => {
       exit={{ opacity: 0 }}
     >
       <img src={githubIcon} alt="GitHub logo" />
-      <input type="text" placeholder="Username" value={username} onChange={inputCallback} />
+      <input type="text" placeholder="Enter GitHub username" value={username} onChange={inputCallback} />
       <p className={`message ${error ? 'error' : 'normal'}`}>{loading ? 'Loading...' : message}</p>
       <button onClick={submitCallback}>Search</button>
+
     </motion.div>
   );
 };

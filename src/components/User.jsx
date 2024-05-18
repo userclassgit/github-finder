@@ -32,6 +32,7 @@ const User = () => {
     >
       <img src={user.avatar_url} alt="User avatar" />
       <h1>{user.name}</h1>
+      <span>@{user.login}</span>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <div>
           <p>{user.public_repos}</p>

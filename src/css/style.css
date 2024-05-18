@@ -1,15 +1,87 @@
 @charset "utf-8";
 
-/* :root {
+:root {
+  --aquamarine: #ACD7CB;
+  --dark-aquamarine: #9BCFC0;
+  --dark-blue: #001F3F;
+  /* --deep-teal: #22445B; */
+  --light-shadow-color: #cbfef0;
+  --dark-shadow-color: #8DB0A6;
+  --gray-aquamarine: #7B959C;
+  --contrast-pink: #E5688A;
+  --shadow-offset: 4px;
+  --shadow-blur-radius: 5px;
+  --button-border-radius: 10px;
+
 }
 
 body {
-
-} */
+  font-family: 'Roboto', sans-serif;
+  background: var(--aquamarine);
+  color: var(--dark-blue);
+  height: 100svh;
+  color: var(--dark-blue);
+}
 
 .container {
   width: min(100% - 30px, 1080px);
   margin-inline: auto;
+}
+
+#root {
+  height: 100svh;
+}
+
+/* 
+========================================
+Search styles
+========================================
+*/
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  img {
+    width: 5rem;
+    margin-bottom: 2.3rem;
+  }
+  input {
+    border-radius: 15px;
+    text-align: center;
+    padding-inline: 5px;
+    height: 3rem;
+    margin-bottom: .5rem;
+    background-color: var(--aquamarine);
+    border: none;
+    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
+              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+  }
+  input::placeholder {
+    text-align: center;
+    color: var(--gray-aquamarine);
+    opacity: 1;
+  }
+  input:focus {
+    outline: none;
+  }
+  p.message {
+    margin-bottom: 1.9rem;
+    font-size: .9rem;
+  }
+  button {
+    background-color: var(--dark-aquamarine);
+    padding: 8px 25px;
+    border-radius: var(--button-border-radius);
+    border: none;
+    box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
+    var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);;
+  }
+  button:active {
+    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
+              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+  }
 }
 
 /* 
