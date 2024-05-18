@@ -4,7 +4,6 @@
   --aquamarine: #ACD7CB;
   --dark-aquamarine: #9BCFC0;
   --dark-blue: #001F3F;
-  /* --deep-teal: #22445B; */
   --light-shadow-color: #cbfef0;
   --dark-shadow-color: #8DB0A6;
   --gray-aquamarine: #7B959C;
@@ -43,10 +42,12 @@ Search styles
   align-items: center;
   justify-content: center;
   height: 100%;
+
   img {
     width: 5rem;
     margin-bottom: 2.3rem;
   }
+
   input {
     border-radius: 15px;
     text-align: center;
@@ -56,31 +57,43 @@ Search styles
     background-color: var(--aquamarine);
     border: none;
     box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+      inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
   }
+
   input::placeholder {
     text-align: center;
     color: var(--gray-aquamarine);
     opacity: 1;
   }
+
   input:focus {
     outline: none;
   }
+
   p.message {
     margin-bottom: 1.9rem;
     font-size: .9rem;
   }
+
   button {
+    cursor: pointer;
     background-color: var(--dark-aquamarine);
     padding: 8px 25px;
     border-radius: var(--button-border-radius);
     border: none;
-    box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-    var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);;
+    box-shadow: 
+      calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   }
+
   button:active {
-    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+    box-shadow: 
+      inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      inset var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   }
 }
 
@@ -96,25 +109,33 @@ User styles
   justify-content: center;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+
   img {
     width: 8rem;
     border: 10px solid var(--aquamarine);
     border-radius: 50%;
     margin-bottom: 1.2rem;
-    box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-    var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);;
+    box-shadow: 
+      calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   }
+
   h1 {
     line-height: 1;
   }
+
   span {
     color: var(--gray-aquamarine);
     margin-bottom: 1rem;
   }
+
   .user-stats {
     display: flex;
     gap: 1rem;
     align-items: center;
+
     /* stat */
     div {
       display: flex;
@@ -122,33 +143,43 @@ User styles
       align-items: center;
       gap: 2px;
       margin-bottom: 1.4rem;
+
       p:first-child {
         color: var(--contrast-pink);
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 1;
       }
-      p + p {
+
+      p+p {
         font-size: .9rem;
         font-weight: 400;
       }
     }
   }
+
   a.visit-page-btn {
     background-color: var(--dark-aquamarine);
     padding: 8px 25px;
     border-radius: var(--button-border-radius);
     border: none;
-    box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-    var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);;
+    box-shadow: 
+      calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
     text-decoration: none;
     color: var(--dark-blue);
     font-weight: 500;
     margin-bottom: 3.5rem;
   }
+
   a.visit-page-btn:active {
-    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+    box-shadow: 
+      inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      inset var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   }
 }
 
@@ -163,11 +194,13 @@ Repo styles
   a {
     text-decoration: none;
   }
+
   h2 {
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 1.2rem;
   }
+
   max-width: 100%;
 }
 
@@ -175,8 +208,11 @@ Repo styles
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: var(--aquamarine);
-  box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
-              var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
+  box-shadow: 
+      calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) 
+      var(--shadow-blur-radius) var(--light-shadow-color),
+      var(--shadow-offset) var(--shadow-offset) 
+      var(--shadow-blur-radius) var(--dark-shadow-color);
   border-radius: var(--button-border-radius);
   margin-bottom: 1.7rem;
   height: 7rem;
@@ -191,19 +227,23 @@ Repo styles
   height: 100%;
   max-width: 100%;
   overflow: hidden;
+
   .repository-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+
     h3 {
       color: var(--contrast-pink);
       font-weight: 500;
       line-height: 1;
     }
+
     p {
       color: var(--gray-aquamarine);
     }
   }
+
   p.repository-description {
     white-space: nowrap;
     overflow: hidden;
@@ -217,6 +257,7 @@ Repo styles
       font-size: 1.1rem;
       margin-top: 0.15rem;
     }
+
     p.last-updated {
       font-size: .93rem;
     }
