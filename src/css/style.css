@@ -134,7 +134,7 @@ User styles
       }
     }
   }
-  a {
+  a.visit-page-btn {
     background-color: var(--dark-aquamarine);
     padding: 8px 25px;
     border-radius: var(--button-border-radius);
@@ -146,7 +146,7 @@ User styles
     font-weight: 500;
     margin-bottom: 3.5rem;
   }
-  a:active {
+  a.visit-page-btn:active {
     box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
               inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
   }
@@ -160,6 +160,9 @@ Repo styles
 */
 
 .repo-container {
+  a {
+    text-decoration: none;
+  }
   h2 {
     font-weight: 500;
     font-size: 1.5rem;
@@ -198,7 +201,6 @@ Repo styles
       line-height: 1;
     }
     p {
-      line-height: 1;
       color: var(--gray-aquamarine);
     }
   }
@@ -206,7 +208,6 @@ Repo styles
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1;
   }
 }
 
