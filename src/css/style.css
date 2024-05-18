@@ -121,16 +121,30 @@ User styles
       flex-direction: column;
       align-items: center;
       gap: 2px;
+      margin-bottom: 1.4rem;
       p:first-child {
         color: var(--contrast-pink);
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 1;
       }
-
-      /* p:nth-child(2) {
-      } */
     }
+  }
+  a {
+    background-color: var(--dark-aquamarine);
+    padding: 8px 25px;
+    border-radius: var(--button-border-radius);
+    border: none;
+    box-shadow: calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
+    var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);;
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  a:active {
+    box-shadow: inset calc(-1 * var(--shadow-offset)) calc(-1 * var(--shadow-offset)) var(--shadow-blur-radius) var(--light-shadow-color),
+              inset var(--shadow-offset) var(--shadow-offset) var(--shadow-blur-radius) var(--dark-shadow-color);
   }
 }
 
